@@ -8,45 +8,49 @@ for address, name in component.list() do modem.broadcast(420, name) end
 
 port = math.random(1, 999)
 
-computer.beep('drone')
+modem.open(port)
 
-computer.beep('drone')
+drone.move(0, -1, 0)
 
-computer.beep('drone')
+computer.beep(500, .2)
+
+computer.beep(700, .2)
+
+
+
+
+
+
+
+
+
+
+
+drone.setLightColor(0xff00f2)
+drone.setLightColor(0xff00f2)
+drone.setLightColor(0xff00f2)
+drone.setLightColor(0xff0000)
+drone.setLightColor(0xff0000)
+drone.setLightColor(0xff0000)
+drone.setLightColor(0x00ff00)
+drone.setLightColor(0x00ff00)
+drone.setLightColor(0x00ff00)
+drone.setLightColor(0x0000ff)
+drone.setLightColor(0x0000ff)
+drone.setLightColor(0x0000ff)
+drone.setLightColor(0x0ffff)
+drone.setLightColor(0x0ffff)
+drone.setLightColor(0x0ffff)
+drone.setLightColor(0x00000)
+drone.setLightColor(0x00000)
+drone.setLightColor(0x00000)
+drone.setLightColor(0x09900)
+drone.setLightColor(0x09900)
+drone.setLightColor(0x09900)
 
 modem.open(port)
 
 drone.move(0, 2, 0)
-
-
-
-
-
-
-
-
-
-drone.setLightColor(0xff00f2)
-drone.setLightColor(0xff00f2)
-drone.setLightColor(0xff00f2)
-drone.setLightColor(0xff0000)
-drone.setLightColor(0xff0000)
-drone.setLightColor(0xff0000)
-drone.setLightColor(0x00ff00)
-drone.setLightColor(0x00ff00)
-drone.setLightColor(0x00ff00)
-drone.setLightColor(0x0000ff)
-drone.setLightColor(0x0000ff)
-drone.setLightColor(0x0000ff)
-drone.setLightColor(0x0ffff)
-drone.setLightColor(0x0ffff)
-drone.setLightColor(0x0ffff)
-drone.setLightColor(0x00000)
-drone.setLightColor(0x00000)
-drone.setLightColor(0x00000)
-drone.setLightColor(0x09900)
-drone.setLightColor(0x09900)
-drone.setLightColor(0x09900)
 
 drone.setStatusText(tostring(port))
 
