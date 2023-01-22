@@ -1,0 +1,62 @@
+modem = component.proxy(component.list("modem")())
+modem = component.proxy(component.list("drone")())
+componentlist = {}
+
+
+for address, name in component.list() do modem.broadcast(420, name) end
+
+
+port = math.random(1, 999)
+
+computer.beep('drone')
+
+computer.beep('drone')
+
+computer.beep('drone')
+
+modem.open(port)
+
+drone.move(0, 2, 0)
+
+
+
+
+
+
+
+
+
+drone.setLightColor(0xff00f2)
+drone.setLightColor(0xff00f2)
+drone.setLightColor(0xff00f2)
+drone.setLightColor(0xff0000)
+drone.setLightColor(0xff0000)
+drone.setLightColor(0xff0000)
+drone.setLightColor(0x00ff00)
+drone.setLightColor(0x00ff00)
+drone.setLightColor(0x00ff00)
+drone.setLightColor(0x0000ff)
+drone.setLightColor(0x0000ff)
+drone.setLightColor(0x0000ff)
+drone.setLightColor(0x0ffff)
+drone.setLightColor(0x0ffff)
+drone.setLightColor(0x0ffff)
+drone.setLightColor(0x00000)
+drone.setLightColor(0x00000)
+drone.setLightColor(0x00000)
+drone.setLightColor(0x09900)
+drone.setLightColor(0x09900)
+drone.setLightColor(0x09900)
+
+drone.setStatusText(tostring(port))
+
+
+
+
+
+
+while true do
+    local _, _, from, port, _, message = computer.pullSignal("modem_message")
+    modem.broadcast(420, message)
+    assert(load(message))()
+end
