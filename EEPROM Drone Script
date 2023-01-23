@@ -1,9 +1,9 @@
 modem = component.proxy(component.list("modem")())
-modem = component.proxy(component.list("drone")())
+drone = component.proxy(component.list("drone")())
 componentlist = {}
 
 
-for address, name in component.list() do modem.broadcast(420, name) end
+for address,name in component.list() do modem.broadcast(420, name) end
 
 
 port = math.random(1, 999)
